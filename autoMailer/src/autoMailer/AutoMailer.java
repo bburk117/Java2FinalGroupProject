@@ -27,23 +27,23 @@ public class AutoMailer implements Job
 	}
 	public void execute(JobExecutionContext context) throws JobExecutionException
 	{
-		System.out.println("Hello World");
-			//Getting params from context
-			JobDataMap jdMap = context.getJobDetail().getJobDataMap();
+	
+		//Getting params from context
+		JobDataMap jdMap = context.getJobDetail().getJobDataMap();
 			
 		
-			//Pulling params from our JobDataMap
-			String recipentEmail = jdMap.getString("emailAddress");//Email Were Sending to
-			String subject = jdMap.getString("subject");//Subject
-			String messageText = jdMap.getString("message");//Message to be Sent
-			String host = jdMap.getString("host");//Smtp Server pulled from web.xml
-			String port = jdMap.getString("port");//Port pulled from web.xml
-			String from= jdMap.getString("adminUserName");//Account info pulled from web.xml
-			String adminPassword = jdMap.getString("adminPassword");
+		//Pulling params from our JobDataMap
+		String recipentEmail = jdMap.getString("emailAddress");//Email Were Sending to
+		String subject = jdMap.getString("subject");//Subject
+		String messageText = jdMap.getString("message");//Message to be Sent
+		String host = jdMap.getString("host");//Smtp Server pulled from web.xml
+		String port = jdMap.getString("port");//Port pulled from web.xml
+		String from= jdMap.getString("adminUserName");//Account info pulled from web.xml
+		String adminPassword = jdMap.getString("adminPassword");
 
 			
-			//Configuring smtp server
-			Properties properties = new Properties();
+		//Configuring smtp server
+		Properties properties = new Properties();
 	        properties.put("mail.smtp.host", host);
 	        properties.put("mail.smtp.port", port);
 	        properties.put("mail.smtp.auth", "true");
@@ -54,9 +54,7 @@ public class AutoMailer implements Job
 	        {
 	            public PasswordAuthentication getPasswordAuthentication() 
 	            {
-	               System.out.println("in PAss word authenticator");
-	            	return new PasswordAuthentication(from, adminPassword);
-	               
+	              return new PasswordAuthentication(from, adminPassword);
 	            }
 	        };
 	        
@@ -76,12 +74,7 @@ public class AutoMailer implements Job
 	        	e.printStackTrace();
 	        	
 	        }
-	       
-	        
-	        
-	    
-	     
-		}
+	     }
 
 
 }
