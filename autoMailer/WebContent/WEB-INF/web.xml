@@ -13,7 +13,7 @@
  	<!-- Port Number -->
     <context-param>
         <param-name>port</param-name>
-        <param-value>587</param-value>
+        <param-value>port_num</param-value>
     </context-param>
  
     <!-- Users Email -->
