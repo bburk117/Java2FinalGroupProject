@@ -19,19 +19,19 @@
     <!-- Users Email -->
     <context-param>
         <param-name>user</param-name>
-        <param-value>epicslurpee@gmail.com</param-value>
+        <param-value>YOUR_USERNAME</param-value>
     </context-param>
  	
  	<!-- Pass Word -->
     <context-param>
         <param-name>pass</param-name>
-        <param-value>fido7890</param-value>
+        <param-value>YOU_PASSWORD</param-value>
     </context-param>
     
     <!-- Cron Expression -->
     <context-param>
     	<param-name>cronExpression</param-name>
-    	<param-value>0 0/1 * 1/1 * ? *</param-value>
+    	<param-value>cronExpressionHere</param-value>
     </context-param>
  
     <welcome-file-list>
