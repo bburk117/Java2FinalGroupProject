@@ -44,23 +44,22 @@ public class EmailServlet extends HttpServlet {
 	private String cronExpression;
 	
 	
-	public void init() {
-		System.out.println("Reading XML");
-        // reads SMTP server setting from web.xml file
-        ServletContext sContext = getServletContext();
-        host = sContext.getInitParameter("host");
-        port = sContext.getInitParameter("port");
-        adminUserName = sContext.getInitParameter("user");
-        adminPass = sContext.getInitParameter("pass");
+	public void init() 
+	{
+		// reads SMTP server setting from web.xml file
+      		ServletContext sContext = getServletContext();
+        	host = sContext.getInitParameter("host");
+        	port = sContext.getInitParameter("port");
+        	adminUserName = sContext.getInitParameter("user");
+        	adminPass = sContext.getInitParameter("pass");
         
-        //Handle this through a date selector in EmailForm
-        cronExpression= sContext.getInitParameter("cronExpression");
-    }
+        	//Handle this through a date selector in EmailForm
+        	cronExpression= sContext.getInitParameter("cronExpression");
+    	}
  
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
-    	System.out.println("Were in DoPost");
-    	//Associating with html elements
+    		//Associating with html elements
 		String name = request.getParameter("name");
 		String emailAddress = request.getParameter("emailAddress");
 		String subject = request.getParameter("subject");
