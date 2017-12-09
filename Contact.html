@@ -78,39 +78,28 @@ nav a:hover::before {
   width: 100%;
 }
 
-p {
-text-align: center;
-margin-left: auto;
-margin-right: auto;
-width: 50em;
-}
-
 h2 {
 text-align: center;
 }
 
-#imagelist{
-font-size: 5;
-width: 1000px;
-display: inline-block;
-text-align:center;
-margin-left: auto;
-margin-right: auto;
+h3 {
+text-align: left;
+margin-left: 150px;
 }
 
-#imagelist2{
-font-size: 5;
-width: 1000px;
-display: inline-block;
-text-align:center;
-margin-left: auto;
-margin-right: auto;
+form {
+text-align: left;
+margin-left: 150px;
 }
 
-contact {
-text-align: center;
+input {
+border:1px solid #000000;
+height: 20px;
 }
-
+    
+textarea {
+border:1px solid #000000;
+}    
 
 </style>
 <header>
@@ -129,36 +118,45 @@ text-align: center;
     </div>
   </header>
   <br>
-
-  <body>
-  <h2>HOMEPAGE</h2>
-  <fieldset>
-  <p>
-AN ACCREDITED BUSINESS WITH THE BETTER BUSINESS BUREAU, NATIONAL GUTTER SYSTEMS AND 
-EXTERIORS HAS BEEN IN BUSINESS SINCE 1993. RECEIVING A CUSTOMER APPRECIATION AWARD 6 
-YEARS IN A ROW, AND AN OUTSTANDING TRADE CONTRACTOR AWARD PROVES WE ARE IN BUSINESS 
-TO BETTER SERVE YOU-OUR CUSTOMER.
-</p>
-</fieldset>
-<br>
-
-<h2>PREVIOUS PROJECTS</h2>
-<br>
-
-  <div id="imagelist">
- 	<img src = "file:///Users/ZachMcKEE/Desktop/pic_1.jpg" />
-  	<img src = "file:///Users/ZachMcKEE/Desktop/pic_2.jpg" />
-  	<img src = "file:///Users/ZachMcKEE/Desktop/pic_3.jpg" />
+<body>
+<h2 id="contact">CONTACT US</h2>
+ <p id="info">
+ NATIONAL GUTTER SYSTEMS AND EXTERIORS LLC
+ </p>
+ <p> 
+ 1ST SCHOOL ST. CARLISLE, IA 50047
+ </p>
+ <p>
+ (515)989-2070
+ </p>
+ <br>
+<h3>Questions? Email Us</h3>
+ <br>
+ <form action="/action_page.php">
+  <div id="name">
+  <label for="name">Name:</label>
+  <br />
+  <input type="text" placeholder="First" name="firstname" value="" />
+  <input type="text" placeholder="Last" name="lastname" value="" />
   </div>
-	
- <div id="imagelist2">
- 	<img src = "file:///Users/ZachMcKEE/Desktop/pic_4.jpg" />
-  	<img src = "file:///Users/ZachMcKEE/Desktop/pic_5.jpg" />
-  	<img src = "file:///Users/ZachMcKEE/Desktop/pic_6.jpg" />
- </div>
+  <br>
+  <div id="email">
+  <label for="email">Email:</label>
+  <br />
+  <input type="text" name="Email" value="" style="width: 304px;" />
+  </div>
+  <br>
+  <div id="comments">
+  <label for="comments">Comments:</label>
+  <br />
+  <textarea cols="41" rows="10"> </textarea>
+  </div>
+  <br>
+  <input type="submit" value="Submit" />
+ </form>
  <br>
  <br>
  <br>
  
+ 
 </body>
-
