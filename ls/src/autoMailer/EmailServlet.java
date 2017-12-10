@@ -30,7 +30,7 @@ import org.quartz.impl.StdSchedulerFactory;
 
 
 
-@WebServlet("/autoMailer")
+@WebServlet("/EmailServlet")
 public class EmailServlet extends HttpServlet {
 	
 	//Variables

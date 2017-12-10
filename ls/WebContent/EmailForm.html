@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-<style>
+<meta charset = "UTF-8">
+ <style>
 body {
 	margin: 0;
 	background: #FFFFFF;
@@ -38,7 +39,6 @@ nav li {
   display: inline-block;
   margin-left: 80px;
   padding-top: 80px;
-  
   position: relative;
 }
 nav a {
@@ -63,15 +63,9 @@ nav a::before {
 nav a:hover::before {
   width: 100%;
 }
-p {
-text-align: center;
-margin-left: auto;
-margin-right: auto;
-width: 45em;
-}
-</style>
-
-<header>
+ </style>
+ 
+ <header>
     <div class="container">
       <h1 class="logo"></h1>
       <img src="file:///Users/ZachMcKEE/Desktop/Company_Logo.png" alt="Logo" />
@@ -80,29 +74,34 @@ width: 45em;
         <ul>
           <li><a href="Main.html">Home</a></li>
           <li><a href="About.html">About</a></li>
-       
+          <li><a href="App.html">Applications</a></li>
+          <li><a href = "EmailForm.html">Auto Mailer</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <br>
-  <h2>ABOUT US</h2>
-  <fieldset>
-  <p>
-  National Gutter Systems and Exteriors was established in 1993. Located in the 
-  center of Carlisle, Iowa, 5 minutes from Des Moines. We are an exterior remodeler 
-  specializing in seamless gutters, window replacement, roofing, and siding with a 
-  background in home building. We have done gutter and exterior jobs in Carlisle and 
-  as far as Ames. Guaranteeing our customers are satisfied is our #1 priority. Give 
-  us a call today to get your free estimate!
-  </p>
-  </fieldset>
   <br>
   <br>
-  <p>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2988.23672168819
-  53!2d-93.48613354865302!3d41.499144679152344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
-  1!3m3!1m2!1s0x87eebe8df2d3cbdd%3A0xc37883eee66f4adc!2s1+School+St%2C+Carlisle%2C+IA+
-  50047!5e0!3m2!1sen!2sus!4v1512370993391" width="800" height="400" frameborder="0" 
-  style="border:0" allowfullscreen></iframe>
-  </p>
+  
+<h2>AUTO MAILER</h2>
+<fieldset>
+<form name = "EmailForm" action="EmailServlet" method="post" enctype="text/plain">
+Name:
+<input type="text" name="name" size="20" required><br>
+E-mail:
+<input type="email" name="emailAddress " size = "20" required><br>
+Subject:
+<input type="text"name="subject"size= "20" required><br>
+Message:
+<textarea rows="10" cols = "39" name = "messageText" required></textarea><br>
+Time To Be Sent:
+<input type="datetime-local" name="cronExpression" required><br>
+<br><input type="submit" value="Send">
+<input type="reset" value="Reset">
+</form>
+</fieldset>
+
+
+
+</html>
