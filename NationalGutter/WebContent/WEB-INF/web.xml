@@ -36,9 +36,7 @@
   </context-param>
   <welcome-file-list>
     <welcome-file>Main.html</welcome-file>
-    <welcome-file>APP.html</welcome-file>
-    <welcome-file>About.html</welcome-file>
-    <welcome-file>EmailForm.html</welcome-file>
+   
   </welcome-file-list>
 	<servlet>
 	  <servlet-name>QuartzInitializer</servlet-name>
