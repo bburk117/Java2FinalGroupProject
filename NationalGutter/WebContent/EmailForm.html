@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<meta charset = "UTF-8">
+<head>
+	<title>AutoMailer</title>
+
+</head>
+<link rel ="stylesheet" type = text/css href = "assets/style.css">
+<h2>AUTO MAILER</h2>
+<fieldset>
+<form name = "EmailForm" action="/autoMailer" method="post" enctype="text/plain">
+Name:
+<input type="text" name="name" size="20" required><br>
+E-mail:
+<input type="email" name="emailAddress " size = "20" required><br>
+Subject:
+<input type="text"name="subject"size= "20" required><br>
+Message:
+<textarea rows="10" cols = "39" name = "messageText" required></textarea><br>
+Time To Be Sent:
+<input type="datetime-local" name="cronExpression" required><br>
+<br><input type="submit" value="Send">
+<input type="reset" value="Reset">
+</form>
+</fieldset>
+
+
+
+</html>
