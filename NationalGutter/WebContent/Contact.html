@@ -1,91 +1,14 @@
 <!DOCTYPE html>
 <html>
-<style>
-body {
-	margin: 0;
-	background: #FFFFFF;
-	font-family: 'Monospace', courier new;
-	font-weight: 500;
-	font-size: 20px;
-	text-align: center;
-}
-.container {
-	width: 80%;
-	margin: 0 auto;
-}
-header {
-  background: #555;
-}
-header::after {
-  content: '';
-  display: table;
-  clear: both;
-}
-.logo {
- 	float: left;
-  padding: 10px 0;
-  
-}
-nav {
-  float: right;
-}
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-nav li {
-  display: inline-block;
-  margin-left: 70px;
-  padding-top: 70px;
-  font-size: 20px;
-  position: relative;
-}
-nav a {
-  color: #000;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 16px;
-}
-nav a:hover {
-  color: #000;
-}
-nav a::before {
-  content: '';
-  display: block;
-  height: 10px;
-  background-color: #000;
-  position: absolute;
-  top: 0;
-  width: 0%;
-  transition: all ease-in-out 250ms;
-}
-nav a:hover::before {
-  width: 100%;
-}
-h2 {
-text-align: center;
-}
-h3 {
-text-align: left;
-margin-left: 150px;
-}
-form {
-text-align: left;
-margin-left: 150px;
-}
-input {
-border:1px solid #000000;
-height: 20px;
-}
-    
-textarea {
-border:1px solid #000000;
-}    
-</style>
+<head>
+	<title>Contact</title>
+
+</head>
+	<link rel ="stylesheet" type = text/css href = "assets/style.css">
 <header>
     <div class="container">
       <h1 class="logo"></h1>
+      <!-- This is pointing to a file stored on your local machine -->
       <img src="file:///Users/ZachMcKEE/Desktop/Company_Logo.png" alt="Logo" />
 
       <nav>
@@ -93,7 +16,7 @@ border:1px solid #000000;
           <li><a href="Main.html">Home</a></li>
           <li><a href="About.html">About</a></li>
           <li><a href="Contact.html">Contact Us</a></li>
-          <li><a href="App.html">Employees</a></li>
+         <li><a href = "login.php">Login</a>
         </ul>
       </nav>
     </div>
@@ -110,34 +33,13 @@ border:1px solid #000000;
  <p>
  (515)989-2070
  </p>
+ <!-- I don't feel like writing another servlet-->
  <br>
-<h3>Questions? Email Us</h3>
- <br>
- <form action="/quoteResequet" method = "post" >
-  <div id="name">
-  <label for="name">Name:</label>
-  <br />
-  <input type="text" placeholder="First" name="firstname" value=""  required/>
-  <input type="text" placeholder="Last" name="lastname" value="" required/>
-  </div>
-  <br>
-  <div id="email">
-  <label for="email">Email:</label>
-  <br />
-  <input type="text" name="Email" value="" style="width: 304px;" required/>
-  </div>
-  <br>
-  <div id="comments">
-  <label for="comments">Comments:</label>
-  <br />
-  <textarea cols="41" rows="10" required> </textarea>
-  </div>
-  <br>
-  <input type="submit" value="Submit" />
- </form>
+<a href ="mailto:surpport@NationalGutter.com?Subject=QuoteRequest"target="_top">Need A Quote?</a>
  <br>
  <br>
- <br>
+ <!-- FaceBook -->
+ <a href = "https://www.facebook.com/pages/National-Gutter-Systems-Exteriors/156170474421790">Like us on Facebook</a>
  
  
 </body>
