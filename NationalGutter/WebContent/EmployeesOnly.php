@@ -20,8 +20,6 @@ if(isset($_SESSION['Identity'])){
 ?>
 <!DOCTYPE html>
 <html>
-<!DOCTYPE html>
-<html>
 <head>
 	<title>Employees Only</title>
 </head>
@@ -32,7 +30,7 @@ if(isset($_SESSION['Identity'])){
     <div class="container">
       <h1 class="logo"></h1>
       <!-- This is pointing to a file stored on your local machine  -->
-      <img src="file:///Users/ZachMcKEE/Desktop/Company_Logo.png" alt="Logo" />
+      <img src="siteImages/Company_Logo.png" alt="Logo" />
 
       <nav>
         <ul>
@@ -46,9 +44,11 @@ if(isset($_SESSION['Identity'])){
   </header>
   <br>
 <?php if (!empty ($user)): ?>
-<br/> Welcome <?=$user['user'];?><br>
-
+<br/> Welcome <?=$user['user'];?>
+<a href = "App.html">"Applications"</a>
+<a href = "EmailForm.html">Auto Mailer</a>
 <?php else:?>
-	<h1>Please Login<h1>
+	<h1>Please Login</h1>
 	<a href="login.php">Login</a>
 <?php endif; ?>
+</html>

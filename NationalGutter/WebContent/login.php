@@ -35,16 +35,15 @@ if(count($results) > 0 && password_verify($_POST['pass'])){
 
 //Ending our if statement
 endif;
-
-
 ?>
+
 <!DOCTYPE html>
 <html>
 <header>
     <div class="container">
       <h1 class="logo"></h1>
       <!-- This is pointing to a file stored on your local machine  -->
-      <img src="file:///Users/ZachMcKEE/Desktop/Company_Logo.png" alt="Logo" />
+      <a href="siteImages/Company_Logo.png" alt="Logo" />
 
       <nav>
         <ul>
