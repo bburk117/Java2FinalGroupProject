@@ -1,8 +1,4 @@
 <?php
-session_start();
-
-//Modular code ftw
-require "database.php";
 
  $customerid = filter_input(INPUT_POST,'custid');
  $address = filter_input(INPUT_POST,'address');
@@ -15,6 +11,13 @@ require "database.php";
  $date = filter_input(INPUT_POST,'date');
  if (!empty($customerid)){
 if (!empty($address)){
+$host = "localhost";
+$dbusername = "root";
+$dbpassword = "";
+$dbname = "nationalgutter";
+
+// Create connection
+$conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
 
 if (mysqli_connect_error()){
 	die('Connect Error ('. mysqli_connect_errno() .') '
@@ -31,7 +34,7 @@ else{
 	}
 	$conn->close();
 }
-}
+} 
 else{
 	echo "Address should not be empty";
 	die();
@@ -42,3 +45,6 @@ else{
 	 die();
  }
 ?>
+<script>
+window.location = 'main.html';
+</script>
